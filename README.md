@@ -8,7 +8,7 @@ A simple and interactive **Tic Tac Toe** game built using **HTML, CSS, and JavaS
 
 ## 🛠️ Features
 
-- 2-player mode
+- 1-player mode
 - Winning highlight
 - Reset game option
 - Stylish and responsive UI
