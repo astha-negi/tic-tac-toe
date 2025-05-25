@@ -61,19 +61,22 @@ const showWinner= (winner)=>{
     msgContainer.classList.remove("hide");
     disableBoxes();
 };
-const checkWinner= ()=>{
-    for(let pattern of winPattern){
-        let pos1=boxes[pattern[0]].innerText;
-        let pos2=boxes[pattern[1]].innerText;
-        let pos3=boxes[pattern[2]].innerText;
+const checkWinner = () => {
+    for (let pattern of winPattern) {
+        let pos1 = boxes[pattern[0]].innerText;
+        let pos2 = boxes[pattern[1]].innerText;
+        let pos3 = boxes[pattern[2]].innerText;
 
-        if(pos1!="" && pos2!="" && pos3!=""){
-            if(pos1===pos2 && pos2===pos3){
-                console.log("winner",pos1);
+        if (pos1 !== "" && pos2 !== "" && pos3 !== "") {
+            if (pos1 === pos2 && pos2 === pos3) {
+                console.log("winner", pos1);
                 showWinner(pos1);
+                return true; // ✅ Fix: Return true when a winner is found
             }
         }
     }
+    return false; // ✅ Fix: Return false if no winner
 };
+
 newBtn.addEventListener("click",resetGame);
 resetBtn.addEventListener("click",resetGame);
