@@ -35,7 +35,7 @@ boxes.forEach((box)=>{
     });
 });
 const gameDraw= ()=>{
-    msg.innerText=`Gamw was a Draw`;
+    msg.innerText=`Game was a Draw`;
     msgContainer.classList.remove("hide");
     disableBoxes();
 };
